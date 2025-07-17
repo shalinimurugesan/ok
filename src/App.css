@@ -1,0 +1,190 @@
+.main-bg {
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #43c6ac 0%, #1bff6a 100%);
+  animation: bgMove 6s ease-in-out infinite alternate;
+  font-family: 'Poppins', 'Nunito', 'Comic Sans MS', cursive, sans-serif;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.floating-emoji {
+  position: absolute;
+  font-size: 2.8rem;
+  opacity: 0.7;
+  pointer-events: none;
+  animation: floatEmoji 5s infinite linear;
+}
+
+@keyframes floatEmoji {
+  0% { transform: translateY(0) scale(1); opacity: 0.7; }
+  50% { transform: translateY(-60px) scale(1.2); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 0.7; }
+}
+
+.center-box {
+  background: rgba(255,255,255,0.95);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(60,60,60,0.18);
+  padding: 48px 32px 64px 32px;
+  position: relative;
+  min-width: 500px;
+  min-height: 400px;
+  text-align: center;
+  font-family: 'Poppins', 'Nunito', 'Comic Sans MS', cursive, sans-serif;
+}
+.emoji-row {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.emoji {
+  font-size: 2.2rem;
+  display: inline-block;
+}
+
+.emoji-bounce {
+  animation: bounce 1.2s infinite alternate;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-18px) scale(1.2); }
+}
+
+.center-box {
+  background: rgba(255,255,255,0.95);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(60,60,60,0.18);
+  padding: 48px 32px 64px 32px;
+  position: relative;
+  min-width: 500px;
+  min-height: 400px;
+  text-align: center;
+}
+
+.greeting {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2d6a4f;
+  margin-bottom: 8px;
+  font-family: 'Poppins', 'Nunito', 'Comic Sans MS', cursive, sans-serif;
+}
+
+.animated-text {
+  animation: floatUpDown 3s ease-in-out infinite, colorChange 3s infinite alternate;
+}
+
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+.love-text {
+  font-size: 1.1rem;
+  color: #ff758c;
+  font-weight: 600;
+  margin-bottom: 20px;
+  animation: fadeInUp 2s ease-out, heartBeat 2s infinite;
+  font-family: 'Poppins', 'Nunito', 'Comic Sans MS', cursive, sans-serif;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5) rotate(-10deg); opacity: 0; }
+  50% { transform: scale(1.1) rotate(5deg); opacity: 0.8; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+@keyframes colorChange {
+  0% { color: #2d6a4f; }
+  50% { color: #ff758c; }
+  100% { color: #43c6ac; }
+}
+
+@keyframes fadeInUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.question {
+  font-size: 1.5rem;
+  color: #1b4332;
+  margin-bottom: 32px;
+  font-family: 'Poppins', 'Nunito', 'Comic Sans MS', cursive, sans-serif;
+}
+
+.btn-row {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yes-btn {
+  background: linear-gradient(90deg, #43c6ac 0%, #f8ffae 100%);
+  color: #1b4332;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 18px;
+  padding: 12px 32px;
+  margin-right: 24px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(60,60,60,0.12);
+  transition: transform 0.2s;
+  font-family: 'Poppins', 'Nunito', 'Comic Sans MS', cursive, sans-serif;
+}
+.yes-btn:hover {
+  transform: scale(1.08);
+  background: linear-gradient(90deg, #f8ffae 0%, #43c6ac 100%);
+}
+
+.no-btn {
+  background: linear-gradient(90deg, #ff758c 0%, #ff7eb3 100%);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 18px;
+  padding: 12px 32px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(60,60,60,0.12);
+  transition: top 0.3s, left 0.3s, transform 0.2s;
+  position: absolute;
+  font-family: 'Poppins', 'Nunito', 'Comic Sans MS', cursive, sans-serif;
+}
+.no-btn:hover {
+  transform: scale(1.08) rotate(-8deg);
+  background: linear-gradient(90deg, #ff7eb3 0%, #ff758c 100%);
+}
+
+.happy-msg {
+  font-size: 1.5rem;
+  color: #2d6a4f;
+  margin-top: 32px;
+  font-weight: 600;
+  animation: happyFade 1s;
+  font-family: 'Poppins', 'Nunito', 'Comic Sans MS', cursive, sans-serif;
+}
+
+@keyframes happyFade {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
