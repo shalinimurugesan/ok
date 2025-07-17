@@ -1,6 +1,5 @@
 {
-    "git.allowForcePush": true,
-    "git.allowNoVerifyCommit": true,
-    "git.alwaysShowStagedChangesResourceGroup": true,
-    "explorer.excludeGitIgnore": true
+    "explorer.excludeGitIgnore": false,
+    "git.enabled": true,
+    "git.enableSmartCommit": true
 }
